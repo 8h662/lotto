@@ -25,8 +25,11 @@ fun createLotto(input: Int) {
     }
 
     for (i in 0..(input-1)) {
+        // 랜덤으로 추출할 인덱스를 선출한다음
         var choiceIndex = Random().nextInt(listLen - i)
+        // 최종 선택 리스트에 추가합니다
         choiceList.add(lottoList[choiceIndex])
+        // lottoList에서 선출된 번호를 제거
         lottoList.removeAt(choiceIndex)
     }
                                                            
